@@ -42,6 +42,12 @@ mdc: true
 
 # 前情提要
 
+- DOM vs. vDOM
+- React Element
+- JSX
+- 單向資料流 與 一律重繪
+
+## Component
 
 
 ---
@@ -52,12 +58,46 @@ class: flex justify-center items-center
 # 2-7 畫面組裝的藍圖：component 初探
 
 ---
+layout: two-cols
+---
 
 # 什麼是 Component
+
+<v-click>
+
+- 由開發者自定義的畫面元件藍圖
+- 可重用的程式碼片段
+
+</v-click>
+
+<v-click>
+
+## 抽象化
+- 根據需求，將關心的特徵與行為歸納出來
+- 將實作細節或複雜性封裝在內部
+- 通用性、重用性
+
+</v-click>
+
+::right::
+
+<br><br><br><br><br><br>
+
+<v-click>
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*wmRD7YIgQsWEt8PBa1dIyQ.png)
+<span class="opacity-30 text-xs">https://sam-j.medium.com/react-component-structure-d38d59eefffd</span>
+
+</v-click>
+
 
 ---
 
 # 定義 Component
+
+
+- 可透過 function 來定義，也可以用 class 定義
+  - React 16.8 之後，function component + hooks 成為主流
 
 ```jsx
 // MyButton.jsx
@@ -70,7 +110,10 @@ export default function MyButton(props) {
 
 <br>
 
-- class component --> function component + hooks
+- Input: props (properties 的意思)
+- Output: React Element
+
+#
 - Component component 名稱首字母必須大寫
 
 ---
@@ -83,7 +126,7 @@ const reactElement = <div id="foo" />;
 ```
 
 ```jsx
-const reactElement = React.createElement('div', { id: 'foo' });
+const reactElement = React.createElement("div", { id: "foo" });
 ```
 ````
 <br>
@@ -107,8 +150,67 @@ const reactElement = React.createElement(MyButton);
 # 藍圖與實例
 
 ---
+layout: two-cols-header
+---
 
 # Props
+
+- props 是 component 藍圖的「變因」或「參數」
+- 將 props 從外部傳入 component，可進行畫面產生流程的客製化，以應付更多需求情境
+
+::left::
+
+<div class="mr-4">
+```js
+// index.js
+const reactElement = (
+  <div>
+    <ProductListItem
+      title="Apple"
+      price={100}
+      imageUrl="https://example.com/apple.jpg"
+    />
+    <ProductListItem
+      title="Banana"
+      price={150}
+      imageUrl="https://example.com/banana.jpg"
+    />
+  </div>
+);
+```
+</div>
+
+::right::
+
+<div class="ml-4">
+````md magic-move
+```jsx
+// ProductListItem.jsx
+export default function ProductListItem(props) {
+  return (
+    <div>
+      <img src={props.imageUrl} />
+      <h2>{props.title}</h2>
+      <p>${props.price}</p>
+    </div>
+  );
+}
+```
+
+```jsx
+// ProductListItem.jsx
+export default function ProductListItem({title, price, imageUrl}) {
+  return (
+    <div>
+      <img src={imageUrl} />
+      <h2>{title}</h2>
+      <p>${price}</p>
+    </div>
+  );
+}
+```
+````
+</div>
 
 ---
 
