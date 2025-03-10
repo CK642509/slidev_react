@@ -363,22 +363,22 @@ export default function Counter() {
 ```jsx {*|2,3,16|2,5-7,16|2,9-11,16|2,13-15,16|2,16,18|*}
 // index.js
 function AppComponent() {
-  useState();  // :heavy_check_mark:
+  useState();  // ✔️
 
   if (...) {
-    useState();
+    useState();  // ❌
   }
 
   for (...) {
-    useState();
+    useState();  // ❌
   }
 
   array.forEach(() => {
-    useState();
+    useState();  // ❌
   })
 }
 
-useState();
+useState();  // ❌
 ```
 ````
 
