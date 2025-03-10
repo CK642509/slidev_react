@@ -150,7 +150,7 @@ const reactElement = React.createElement(MyButton);
 # 藍圖與實例
 
 ---
-layout: two-cols-header
+layout: TwoColumn57
 ---
 
 # Props
@@ -182,7 +182,6 @@ const reactElement = (
 
 ::right::
 
-<div class="ml-4">
 ````md magic-move
 ```jsx
 // ProductListItem.jsx
@@ -210,7 +209,12 @@ export default function ProductListItem({title, price, imageUrl}) {
 }
 ```
 ````
-</div>
+
+
+---
+
+# 特殊的 prop：children
+
 
 ---
 
