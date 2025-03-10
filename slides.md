@@ -108,13 +108,18 @@ export default function MyButton(props) {
 }
 ```
 
-<br>
-
 - Input: props (properties 的意思)
 - Output: React Element
 
+<v-click>
+
 #
 - Component component 名稱首字母必須大寫
+  - transpiler 在做 JSX 轉譯時，會依據首字母大小寫來判斷該怎麼呼叫 `React.createElement`
+    - 字串，e.g. `React.createElement('div')`
+    - 變數名稱，e.g. `React.createElement(MyButton)`
+
+</v-click>
 
 ---
 
@@ -157,6 +162,7 @@ layout: TwoColumn57
 
 - props 是 component 藍圖的「變因」或「參數」
 - 將 props 從外部傳入 component，可進行畫面產生流程的客製化，以應付更多需求情境
+- props 是唯讀且不可被修改的
 
 ::left::
 
@@ -277,12 +283,160 @@ class: flex justify-center items-center
 ---
 
 # 什麼是 state?
+- 狀態資料
+- 臨時的「可更新的資料」
+
+<br>
+
+### 單向資料流
+- 當畫面更新時，畫面才會發生對應的更新，以資料去驅動畫面
+
+<br>
+
+### 一律重繪策略
+- 沒必要重繪整個畫面，只需要重繪與有被更新的資料相關的區塊即可
+- component 是 state 機制運作的載體，也是一律重繪的界線
+
+<br>
+
+> ### state 必須依附在 component 之上，發起 state 更新並啟動重繪時，只會重繪該 component 以內 (包含子孫代 component) 的畫面區塊
+
+
+
 
 ---
 
 # useState 初探
 
---- 
+- 在 function component 中，可透過 `useState` 這個 hook 來定義與存取 state
+
+````md magic-move {lines: true}
+```jsx {*|2,5,9|*}
+// Counter.jsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button>-</button>
+      <span>{count}</span>
+      <button>+</button>
+    </div>
+  );
+}
+```
+
+```jsx {*|7-13,17,19|5,8,12|*}
+// Counter.jsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  const handleDecrementButtonClick = () => {
+    setCount(count - 1);
+  };
+
+  const handleIncrementButtonClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <button onClick={handleDecrementButtonClick}>-</button>
+      <span>{count}</span>
+      <button onClick={handleIncrementButtonClick}>+</button>
+    </div>
+  );
+}
+```
+````
+
+---
+
+# 關於 state 的補充觀念 (1)
+
+- hooks 僅可以在 component function 內的頂層作用域被呼叫 
+
+````md magic-move {lines: true}
+```jsx {*|2,3,16|2,5-7,16|2,9-11,16|2,13-15,16|2,16,18|*}
+// index.js
+function AppComponent() {
+  useState();  // :heavy_check_mark:
+
+  if (...) {
+    useState();
+  }
+
+  for (...) {
+    useState();
+  }
+
+  array.forEach(() => {
+    useState();
+  })
+}
+
+useState();
+```
+````
+
+---
+
+# 關於 state 的補充觀念 (2)
+
+- `useState` 的回傳值是一個陣列
+  - 讓開發者在呼叫 `setState` 時，可以更方便分別賦值到自訂命名的變數上
+
+<v-click>
+
+````md magic-move
+```js {1,2|*}
+// 假設是回傳物件
+const { state, setState } = useState();
+
+const { state: count, setState: setCount } = useState(0);
+const { state: name, setState: setName } = useState("Foo");
+```
+
+```js
+// 回傳陣列
+const [state, setState] = useState();
+
+const [count, setCount] = useState(0);
+const [name, setName] = useState("Foo");
+```
+````
+
+</v-click>
+
+<br>
+
+<v-click>
+
+- 呼叫 `setState` 方法是更新 state 值並觸發 re-render 的唯一合法手段
+
+</v-click>
+
+<br>
+
+<v-click>
+
+- React 是依據 hooks 的固定的呼叫順序來區別彼此
+
+</v-click>
+
+<br>
+
+<v-click>
+
+- 同一個 component 的同一個 state，在該 component 的不同實例之間的狀態資料是獨立的
+
+</v-click>
+
+
+---
 
 # 2-8 重點整理
 
