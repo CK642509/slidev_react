@@ -27,10 +27,10 @@ mdc: true
 # 上竣
 - 非本科系 (農業化學系、生醫電資所)
 - ~ 3 年年資
-- 新創，全端開發 (Vue + Python)
+- AI 新創公司，全端開發 (Vue + Python)
 - iThome 鐵人賽
-  - 2024 用 Python 打造你的 Discord BOT
-  - 2023 FastAPI 開發筆記：從新手到專家的成長之路
+  - 2024 Python 組 「用 Python 打造你的 Discord BOT」 佳作
+  - 2023 Software Development 組 「FastAPI 開發筆記：從新手到專家的成長之路」
 
 ---
 
