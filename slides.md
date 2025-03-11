@@ -451,3 +451,52 @@ class: flex justify-center items-center
 
 # 2-9 React 畫面更新的流程機制：reconciliation
 
+
+---
+
+# Render phase 與 commit phase
+
+圖
+
+---
+
+# Reconciliation
+
+圖
+
+1. 呼叫 `setState` 方法更新資料
+   - 執行 `Object.is()` 檢查 state 是否有不同
+2. 更新資料並 re-render component function
+3. 比較新舊版本的 React element
+4. 更新差異之處所對應的實際 DOM element
+
+圖 2-9-2
+
+---
+layout: two-cols-header
+---
+
+# setState 觸發的 re-render 會連帶觸發子 component 的 re-render
+
+- Component 共有兩種會被觸發 re-render 的可能情形
+  1. 本身的 `setState`
+  2. 父層 component re-render
+
+::right::
+
+<v-click>
+
+![](https://mokkapps.twic.pics/mokkapps.de/blog/debug-why-react-re-renders-a-component/react-vdom-dom_hmargb.jpg)
+<span class="opacity-30 text-xs">https://mokkapps.de/blog/debug-why-react-re-renders-a-component</span>
+
+</v-click>
+
+---
+
+# Quiz
+
+## Q6: 請解釋 React 更新畫面的 reconciliation 流程
+
+<br>
+
+## Q7: 一個 component 有哪些可能會被觸發 re-render 的情形？
