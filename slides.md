@@ -500,3 +500,21 @@ layout: two-cols-header
 <br>
 
 ## Q7: 一個 component 有哪些可能會被觸發 re-render 的情形？
+
+---
+class: flex justify-center items-center
+
+---
+
+# 第二章回顧
+
+---
+
+
+
+---
+class: flex justify-center items-center
+
+---
+
+# Thank you
