@@ -41,7 +41,17 @@ mdc: true
 - JSX
 - 單向資料流 與 一律重繪
 
+<br><br><br>
+
+<v-click>
+
+<div class="text-center">
+
 ## Component
+
+</div>
+
+</v-click>
 
 
 ---
@@ -119,26 +129,30 @@ export default function MyButton(props) {
 
 # 呼叫 Component
 
+- 之前有介紹過，React element 可以這樣建立：
+
 ````md magic-move
-```jsx
-const reactElement = <div id="foo" />;
+```js
+const reactElement = React.createElement("div", { id: "foo" });
 ```
 
 ```jsx
-const reactElement = React.createElement("div", { id: "foo" });
+const reactElement = <div id="foo" />;
 ```
 ````
 <br>
 
 <v-click>
 
+- React element 的類型其實也可以是自定義的 component：
+
 ````md magic-move
-```jsx
-const reactElement = <MyButton />;
+```js
+const reactElement = React.createElement(MyButton);
 ```
 
 ```jsx
-const reactElement = React.createElement(MyButton);
+const reactElement = <MyButton />;
 ```
 ````
 
