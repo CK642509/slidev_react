@@ -162,6 +162,39 @@ const reactElement = <MyButton />;
 
 # 藍圖與實例
 
+- Component --> 藍圖
+- 呼叫 Component --> 產生實例 (instance)
+
+<br>
+
+<v-click>
+
+- 珍珠奶茶製作配方 --> 藍圖
+- 調製珍珠奶茶 --> 產生實例
+
+</v-click>
+
+<br>
+
+<v-click>
+
+- 珍珠奶茶 component
+  - 實際做好的珍珠奶茶 ❌
+  - 珍珠奶茶的製作配方 ✔️
+
+</v-click>
+
+<br>
+
+<v-click>
+
+- 重複使用珍珠奶茶 component --> 以這套製作配方去重複產出很多杯珍珠奶茶
+  - 這些珍珠奶茶彼此獨立，不互相影響
+  - 可以客製化去調整甜度、冰塊
+
+</v-click>
+
+
 ---
 layout: TwoColumn57
 ---
@@ -226,9 +259,71 @@ export default function ProductListItem({title, price, imageUrl}) {
 
 
 ---
+layout: TwoColumn57
+---
 
 # 特殊的 prop：children
 
+````md magic-move
+```jsx
+<MyCard children="這裡的內容就是 children props 的值" />
+```
+
+```jsx
+<MyCard>這裡的內容就是 children props 的值</MyCard>
+```
+````
+
+<br>
+
+<v-click>
+
+- 可以在開標籤與閉標籤之間填寫 prop 值 --> 設計「容器與內容」相關的 component 更方便與直覺
+
+</v-click>
+
+::left::
+
+<v-click>
+
+<div class="mr-4">
+```jsx
+// MyComponent.jsx
+export default function MyCard(props) {
+  return (
+    <div className="crad">
+      {props.children}
+    </div>
+  )
+}
+```
+</div>
+
+</v-click>
+
+::right::
+
+<v-click>
+
+```jsx
+function App() {
+  return (
+    <MyCard>
+      <h1>Hello, world!</h1>
+      <p>Welcome to my website.</p>
+    </MyCard>
+  )
+}
+```
+
+</v-click>
+
+<v-click>
+
+- 除了特有的傳值方式之外，本質上與其他 props 沒有什麼區別
+- React 本身並沒有預設 children prop 的用途
+
+</v-click>
 
 ---
 
@@ -238,6 +333,14 @@ export default function ProductListItem({title, price, imageUrl}) {
 
 # 2-7 重點整理
 
+- Component
+- 藍圖 vs. 實例
+- props
+
+圖
+
+
+
 ---
 
 # Quiz
@@ -245,6 +348,8 @@ export default function ProductListItem({title, price, imageUrl}) {
 ## Q1: 為什麼 component 命名中的首字母必須為大寫?
 
 
+---
+layout: two-cols
 ---
 
 # Quiz
@@ -255,14 +360,47 @@ export default function ProductListItem({title, price, imageUrl}) {
 - \(C) 333
 - (D) 444
 
+::right::
 
-```jsx
-// MyButton.jsx
-export default function MyButton(props) {
+
+```jsx {*}{maxHeight:'65vh'}
+// index.js
+import ReactDom from 'react-dom/client';
+
+function MyComponent1(props) {
+  console.log("render MyComponent1")
   return (
-    <button>I'm a button</button>
+    <div className="MyComponent1-wrapper">
+      <h1>I am MyComponent1</h1>
+      <MyComponent2 />
+      <MyComponent2 />
+    </div>
   );
 }
+
+function MyComponent2(props) {
+  console.log("render MyComponent2")
+  return (
+    <div className="MyComponent2-wrapper">
+      <MyComponent3 />
+      <MyComponent3 />
+    </div>
+  );
+}
+
+function MyComponent3(props) {
+  console.log("render MyComponent3")
+  return (
+    <div className="MyComponent3-wrapper">
+      <h3>I am MyComponent3</h3>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root')
+);
+root.render(<MyComponent1 />)
 ```
 
 ---
