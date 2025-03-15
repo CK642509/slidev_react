@@ -53,6 +53,26 @@ mdc: true
 
 </v-click>
 
+<br>
+
+<v-click>
+
+<div class="text-center">
+
+### 2-7 畫面組裝的藍圖：component 初探
+### 2-8 React 畫面更新的發動機：state 初探
+### 2-9 React 畫面更新的流程機制：reconciliation
+
+</div>
+
+</v-click>
+
+<!-- 
+- [click] 導入一個新的概念，叫做 component
+- [click] 在 2-7 會簡單介紹什麼是 component，以及如何透過 props，將外部參數傳入到 component 內
+- 接著，在 2-8 會介紹什麼是 state，以及在 component 內，如何用 state 做資料狀態管理與畫面更新
+- 最後，在 2-9 會以 component 的角度，再完整地走過一次 React 畫面更新的流程機制 -->
+
 
 ---
 class: flex justify-center items-center
