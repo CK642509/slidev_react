@@ -367,6 +367,16 @@ function App() {
 
 ## Q1: 為什麼 component 命名中的首字母必須為大寫?
 
+<br>
+
+<v-click>
+
+> - #### 為了滿足 JSX 語法在轉譯時的元素類型判斷需求
+
+> - #### 也是 React 社群在開發上的命名慣例
+
+</v-click>
+
 
 ---
 layout: two-cols
@@ -375,10 +385,9 @@ layout: two-cols
 # Quiz
 
 ## Q2: 請問 console 中依序會印出什麼?
-- (A) 111
-- (B) 222
-- \(C) 333
-- (D) 444
+- (A) 1 2 2 3 3 3 3
+- (B) 1 2 3 3 2 3 3
+- \(C) 1 2 3 2 3 3 3
 
 ::right::
 
@@ -402,6 +411,7 @@ function MyComponent2(props) {
   console.log("render MyComponent2")
   return (
     <div className="MyComponent2-wrapper">
+      <h2>I am MyComponent2</h2>
       <MyComponent3 />
       <MyComponent3 />
     </div>
@@ -424,17 +434,55 @@ root.render(<MyComponent1 />)
 ```
 
 ---
+layout: two-cols-header
+---
 
 # Quiz
 
-## Q3: 下列哪個才是正確的 props 正確使用方法?
+## Q3: 下列哪個才是正確的 props 正確使用方法? 為什麼?
 
-```jsx
-// MyButton.jsx
+::left::
+
+### (A)
+
+<div class="mr-4">
+```jsx {*|1,2,5}{lines: true}
 export default function ProductListItem(props) {
   props.price = props.price * 0.9
   return (
-    <button>I'm a button</button>
+    <div>
+      <p>折扣價：{props.price}</p>
+    </div>
+  );
+}
+```
+</div>
+
+### (B)
+
+<div class="mr-4">
+```jsx {*|1,2,5}{lines: true}
+export default function ProductListItem(props) {
+  const discountPrice = props.price * 0.9
+  return (
+    <div>
+      <p>折扣價：{discountPrice}</p>
+    </div>
+  );
+}
+```
+</div>
+
+::right::
+
+### \(C)
+```jsx {*|1,2,5}{lines: true}
+export default function ProductListItem({ price }) {
+  price = price * 0.9
+  return (
+    <div>
+      <p>折扣價：{price}</p>
+    </div>
   );
 }
 ```
@@ -445,6 +493,14 @@ class: flex justify-center items-center
 ---
 
 # 2-8 React 畫面更新的發動機：state 初探
+
+---
+class: flex justify-center items-center
+
+---
+
+# 狀態更新
+
 
 ---
 
@@ -614,7 +670,26 @@ const [name, setName] = useState("Foo");
 
 <br>
 
+<v-click>
+
+> - #### state 是前端應用程式中用於記憶狀態的臨時、可更新資料，並且在資料更新時更新對應的畫面
+
+> - #### state 必須依附在 component 內才能記憶並維持狀態資料，而發起該 state 資料的更新並啟動重繪時，只會重繪該 component 以內 (包含子孫代 component)的畫面區塊
+
+</v-click>
+
+<br>
+
 ## Q5: 同一個 component 在多個地方被呼叫，它們之間的 state 資料會互通嗎? 為什麼?
+
+<br>
+
+<v-click>
+
+> - #### 不會，同一個 component 的同一個 state，在該 component 的不同實例之間的狀態資料是獨立的
+
+</v-click>
+
 
 ---
 class: flex justify-center items-center
@@ -671,7 +746,27 @@ layout: two-cols-header
 
 <br>
 
+<v-click>
+
+> #### 1. 呼叫 `setState` 方法更新 state 資料，並發起 re-render
+> #### 2. 更新 state 資料並 re-render component function
+> #### 3. 將新舊版本的 React Element 進行結構比較，並更新差異之處所對應的實際 DOM element
+
+</v-click>
+
+<br>
+
 ## Q7: 一個 component 有哪些可能會被觸發 re-render 的情形？
+
+<br>
+
+<v-click>
+
+> #### 有兩種可能的情形：
+> - #### component 本的有定義 state，且該 state 的 `setState` 方法被呼叫
+> - #### component 的父代或祖父代 component 發生 re-render 
+
+</v-click>
 
 ---
 class: flex justify-center items-center
