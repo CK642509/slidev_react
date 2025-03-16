@@ -703,28 +703,22 @@ class: flex justify-center items-center
 
 <br>
 
-<!-- <div v-click.hide="[]">
-
-![](./process_all.svg)
-
-</div> -->
-
 <v-switch>
   <template #1>
     <img
-      src="./process_all.svg"
+      src="/process_all.svg"
       alt=""
     />
   </template>
   <template #2>
     <img
-      src="./process_render.svg"
+      src="/process_render.svg"
       alt=""
     />
   </template>
   <template #3>
     <img
-      src="./process_re-render.svg"
+      src="/process_re-render.svg"
       alt=""
     />
   </template>
@@ -742,7 +736,7 @@ layout: two-cols-header
   <img
     v-click
     class="w-150"
-    src="./process_all.svg"
+    src="/process_all.svg"
     alt=""
   />
 </div>
