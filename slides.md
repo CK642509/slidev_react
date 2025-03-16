@@ -277,6 +277,7 @@ export default function ProductListItem({title, price, imageUrl}) {
 ```
 ````
 
+<!-- [click]作者有提到，習慣上會使用解構的方式直接在參數中提取所需的內容 -->
 
 ---
 layout: TwoColumn57
@@ -345,6 +346,13 @@ function App() {
 
 </v-click>
 
+<!-- 
+- 在 React 中，有一個特殊的 prop，叫做 children。
+- 這是一個簡單的範例
+- [click]但它也可以改成這樣寫
+- [click]這樣寫的好處是
+-->
+
 ---
 
 # Component 的 render 與 re-render
@@ -370,6 +378,15 @@ function App() {
     />
   </template>
 </v-switch>
+
+<!-- 
+- 最後，來介紹一下 component 的 render 與 re-render
+- [click]這是我自己畫的一個流程圖，解釋...
+- ...稱為「一次 render」，...稱為「re-render」
+- [click]當 component 第一次 render 時，它會依序去 render 它的子 component
+- 以這個圖為例，component 1 有兩個子 component 叫 component 2，而 component 2 也有 2 個子 coponent
+- [click]在一次 render 時就會是這個順序
+-->
 
 ---
 
@@ -547,11 +564,7 @@ class: flex justify-center items-center
 
 </v-click>
 
-<v-click>
-
 <br>
-
-</v-click>
 
 <v-click>
 
@@ -561,11 +574,7 @@ class: flex justify-center items-center
 
 </v-click>
 
-<v-click>
-
 <br>
-
-</v-click>
 
 <v-click>
 
