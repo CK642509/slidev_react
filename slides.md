@@ -731,7 +731,7 @@ class: flex justify-center items-center
 </v-switch>
 
 ---
-layout: two-cols-headers
+layout: two-cols-header
 
 ---
 
