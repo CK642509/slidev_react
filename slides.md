@@ -349,6 +349,29 @@ function App() {
 
 # Component 的 render 與 re-render
 
+<v-switch>
+  <template #1>
+    <img
+      src="/process_all_2.svg"
+      alt=""
+    />
+  </template>
+  <template #2>
+    <img
+      class="ml-3 mt-7"
+      src="/components_2.svg"
+      alt=""
+    />
+  </template>
+  <template #3>
+    <img
+      src="/components.svg"
+      alt=""
+    />
+  </template>
+</v-switch>
+
+
 ---
 
 # 2-7 重點整理
@@ -357,7 +380,10 @@ function App() {
 - 藍圖 vs. 實例
 - props
 
-圖
+<img
+  src="/process_all_2.svg"
+  alt=""
+/>
 
 
 
@@ -389,10 +415,17 @@ layout: two-cols
 - (B) 1 2 3 3 2 3 3
 - \(C) 1 2 3 2 3 3 3
 
+<img
+  v-click
+  class="w-80"
+  src="/components_2.svg"
+  alt=""
+/>
+
 ::right::
 
 
-```jsx {*}{maxHeight:'65vh'}
+```jsx {*}{lines: true, maxHeight:'65vh'}
 // index.js
 import ReactDom from 'react-dom/client';
 
@@ -495,12 +528,25 @@ class: flex justify-center items-center
 # 2-8 React 畫面更新的發動機：state 初探
 
 ---
-class: flex justify-center items-center
 
----
+# 狀態更新...?
 
-# 狀態更新
+<br>
 
+<v-switch>
+  <template #1>
+    <img
+      src="/process_all_2.svg"
+      alt=""
+    />
+  </template>
+  <template #2>
+    <img
+      src="/process_all_2_setState.svg"
+      alt=""
+    />
+  </template>
+</v-switch>
 
 ---
 
@@ -510,19 +556,38 @@ class: flex justify-center items-center
 
 <br>
 
+<v-click>
+
 ### 單向資料流
 - 當畫面更新時，畫面才會發生對應的更新，以資料去驅動畫面
 
+</v-click>
+
+<v-click>
+
 <br>
+
+</v-click>
+
+<v-click>
 
 ### 一律重繪策略
 - 沒必要重繪整個畫面，只需要重繪與有被更新的資料相關的區塊即可
 - component 是 state 機制運作的載體，也是一律重繪的界線
 
+</v-click>
+
+<v-click>
+
 <br>
+
+</v-click>
+
+<v-click>
 
 > #### state 必須依附在 component 之上，發起 state 更新並啟動重繪時，只會重繪該 component 以內 (包含子孫代 component) 的畫面區塊
 
+</v-click>
 
 ---
 
@@ -660,6 +725,9 @@ const [name, setName] = useState("Foo");
 
 # 2-8 重點整理
 
+- state
+- useState
+
 ---
 
 # Quiz
@@ -706,17 +774,23 @@ class: flex justify-center items-center
 <v-switch>
   <template #1>
     <img
-      src="/process_all.svg"
+      src="/process_all_2.svg"
       alt=""
     />
   </template>
   <template #2>
     <img
-      src="/process_render.svg"
+      src="/process_all.svg"
       alt=""
     />
   </template>
   <template #3>
+    <img
+      src="/process_render.svg"
+      alt=""
+    />
+  </template>
+  <template #4>
     <img
       src="/process_re-render.svg"
       alt=""
@@ -736,7 +810,7 @@ layout: two-cols-header
   <img
     v-click
     class="w-150"
-    src="/process_all.svg"
+    src="/process_re-render.svg"
     alt=""
   />
 </div>
@@ -748,8 +822,6 @@ layout: two-cols-header
 2. 更新資料並 re-render component function
 3. 比較新舊版本的 React element
 4. 更新差異之處所對應的實際 DOM element
-
-圖 2-9-2
 
 </v-click>
 
