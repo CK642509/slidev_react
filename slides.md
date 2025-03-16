@@ -371,22 +371,6 @@ function App() {
   </template>
 </v-switch>
 
-
----
-
-# 2-7 重點整理
-
-- Component
-- 藍圖 vs. 實例
-- props
-
-<img
-  src="/process_all_2.svg"
-  alt=""
-/>
-
-
-
 ---
 
 # Quiz
@@ -720,14 +704,6 @@ const [name, setName] = useState("Foo");
 
 </v-click>
 
-
----
-
-# 2-8 重點整理
-
-- state
-- useState
-
 ---
 
 # Quiz
@@ -862,7 +838,7 @@ layout: two-cols-header
 
 <br>
 
-## Q7: 一個 component 有哪些可能會被觸發 re-render 的情形？
+## Q7: 一個 component 有哪些可能會被觸發 re-render 的情形?
 
 <br>
 
