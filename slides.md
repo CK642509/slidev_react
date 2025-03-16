@@ -521,9 +521,7 @@ class: flex justify-center items-center
 
 <br>
 
-> ### state 必須依附在 component 之上，發起 state 更新並啟動重繪時，只會重繪該 component 以內 (包含子孫代 component) 的畫面區塊
-
-
+> #### state 必須依附在 component 之上，發起 state 更新並啟動重繪時，只會重繪該 component 以內 (包含子孫代 component) 的畫面區塊
 
 
 ---
@@ -703,13 +701,53 @@ class: flex justify-center items-center
 
 # Render phase 與 commit phase
 
-圖
+<br>
+
+<!-- <div v-click.hide="[]">
+
+![](./process_all.svg)
+
+</div> -->
+
+<v-switch>
+  <template #1>
+    <img
+      src="./process_all.svg"
+      alt=""
+    />
+  </template>
+  <template #2>
+    <img
+      src="./process_render.svg"
+      alt=""
+    />
+  </template>
+  <template #3>
+    <img
+      src="./process_re-render.svg"
+      alt=""
+    />
+  </template>
+</v-switch>
+
+---
+layout: two-cols-headers
 
 ---
 
 # Reconciliation
 
-圖
+
+<div>
+  <img
+    v-click
+    class="w-150"
+    src="./process_all.svg"
+    alt=""
+  />
+</div>
+
+<v-click>
 
 1. 呼叫 `setState` 方法更新資料
    - 執行 `Object.is()` 檢查 state 是否有不同
@@ -718,6 +756,8 @@ class: flex justify-center items-center
 4. 更新差異之處所對應的實際 DOM element
 
 圖 2-9-2
+
+</v-click>
 
 ---
 layout: two-cols-header
