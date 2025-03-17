@@ -875,7 +875,6 @@ class: flex justify-center items-center
 
 <div class="grid-container">
   <img
-    v-click
     src="/one-way-dataflow.svg"
     alt=""
   />
@@ -902,7 +901,6 @@ class: flex justify-center items-center
 </div>
 
 </v-click>
-
 
 <style>
 .grid-container {
@@ -945,7 +943,6 @@ class: flex justify-center items-center
     </div>
   </template>
 </v-switch>
-
 
 <!-- 
 - 因此，在 2-1 介紹了什麼是 DOM? 什麼是 virtual DOM?
