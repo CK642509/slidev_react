@@ -994,13 +994,6 @@ class: flex justify-center items-center
 <br>
 2-9 React 畫面更新的流程機制：reconciliation
 
-<div>
-  <img
-    src="/process_all.svg"
-    alt=""
-  />
-</div>
-
 <!-- 
 - 根據需求，將畫面拆成多個 component
 - component 是藍圖，用來產生 React element，也可以透過 props 來微調產生的 React element
