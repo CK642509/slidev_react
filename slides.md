@@ -994,13 +994,10 @@ class: flex justify-center items-center
 <br>
 2-9 React 畫面更新的流程機制：reconciliation
 
-<!-- 
-- 根據需求，將畫面拆成多個 component
-- component 是藍圖，用來產生 React element，也可以透過 props 來微調產生的 React element
-- 而 component 的資料狀態，則是用 state 來實現
-- 在第三章會再更仔細地介紹 state
-- 第四章會介紹 Component 的生命週期與資料流
-- 第五章則會介紹 useState 以外的其他 hook -->
+<img
+  src="/process_all.svg"
+  alt=""
+/>
 
 ---
 class: flex justify-center items-center
