@@ -868,7 +868,54 @@ class: flex justify-center items-center
 
 ---
 
+# 畫面管理機制
 
+2-6 單向資料流與一律重繪渲染策略
+
+
+<div class="grid-container">
+  <img
+    v-click
+    src="/one-way-dataflow.svg"
+    alt=""
+  />
+  <span>圖 2-6-1</span>
+</div>
+
+<br>
+
+### 單向資料流
+- 可維護性↑、可讀性↑、資料出錯風險↓、效能優化↑
+
+<br>
+
+### 一律重繪策略
+- 資料更新後，一律清空畫面再重繪畫面
+- 缺點：大量不必要的 DOM 操作導致效能問題
+
+<v-click>
+
+<div class="text-center">
+
+## virtual DOM
+
+</div>
+
+</v-click>
+
+
+<style>
+.grid-container {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto;
+}
+</style>
+
+<!-- 
+- 在 2-6 介紹到，在眾多現代端框架或解決方案中，「單向資料流」已經成為主流，因為...
+- 為了做到單向資料流，React 選擇使用「一律重繪」策略
+- 但，全部都重繪實際 DOM 很浪費效能，所以改成重繪虛擬的 DOM -->
 
 ---
 class: flex justify-center items-center
