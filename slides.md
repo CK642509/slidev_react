@@ -917,6 +917,73 @@ class: flex justify-center items-center
 - 為了做到單向資料流，React 選擇使用「一律重繪」策略
 - 但，全部都重繪實際 DOM 很浪費效能，所以改成重繪虛擬的 DOM -->
 
+
+---
+
+# virtual DOM
+
+2-1 DOM 與 Virtual DOM
+<br>
+2-2 建構畫面的最小單位：React element
+<br>
+2-3 Render React element
+
+<v-switch>
+  <template #1>
+    <div class="flex justify-center">
+      <img
+        src="/vDOM.svg"
+        alt=""
+      />
+    </div>
+  </template>
+  <template #2>
+    <div class="flex justify-center">
+      <img
+        src="/vDOM_2.svg"
+        alt=""
+      />
+    </div>
+  </template>
+</v-switch>
+
+
+<!-- 
+- 因此，在 2-1 介紹了什麼是 DOM? 什麼是 virtual DOM?
+- [click]在 React 中，React Element 是基於 virtual DOM 概念所實現的虛擬畫面結構元素，同時也是 React 畫面結構中的最小單位
+- 而 React Element 是透過 createElement() 這個 function 產生出來的
+- 最後這些 React Element 會再透過 react-dom 進行轉換與繪製，變成實際的 DOM -->
+
+---
+
+# JSX
+
+2-4 JSX 根本不是在 Javacript 寫 HTML
+<br>
+2-5 JSX 語法規則脈絡與畫面渲染實用技巧
+
+<div class="grid-container">
+  <img
+    class="w-200"
+    src="/jsx.svg"
+    alt=""
+  />
+  <span>圖 2-4-5</span>
+</div>
+
+<style>
+.grid-container {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto;
+}
+</style>
+
+<!-- 
+- 但 createElement 其實使用上不太直觀，所以就有了 JSX 語法糖
+- JSX 語法長得很像 HTML，讓開發者可以更方便、簡潔、易讀
+- 程式碼中的 JSX 語法必須經過外部工具轉譯成 React.createElement，才能正常地被瀏覽器執行 -->
+
 ---
 class: flex justify-center items-center
 
