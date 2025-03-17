@@ -984,7 +984,6 @@ class: flex justify-center items-center
 - JSX 語法長得很像 HTML，讓開發者可以更方便、簡潔、易讀
 - 程式碼中的 JSX 語法必須經過外部工具轉譯成 React.createElement，才能正常地被瀏覽器執行 -->
 
----
 
 ---
 class: flex justify-center items-center
