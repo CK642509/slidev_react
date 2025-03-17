@@ -426,7 +426,7 @@ layout: two-cols
 ::right::
 
 
-```jsx {*}{lines: true, maxHeight:'65%'}
+```jsx {*}{lines: true, maxHeight:'65vh'}
 // index.js
 import ReactDom from 'react-dom/client';
 
