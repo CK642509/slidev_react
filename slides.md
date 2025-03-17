@@ -994,10 +994,12 @@ class: flex justify-center items-center
 <br>
 2-9 React 畫面更新的流程機制：reconciliation
 
-<img
-  src="/process_all.svg"
-  alt=""
-/>
+<div>
+  <img
+    src="/process_all.svg"
+    alt=""
+  />
+</div>
 
 <!-- 
 - 根據需求，將畫面拆成多個 component
