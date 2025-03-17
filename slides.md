@@ -986,8 +986,6 @@ class: flex justify-center items-center
 
 ---
 
-# Component
-
 ---
 class: flex justify-center items-center
 
