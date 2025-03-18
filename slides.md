@@ -984,6 +984,33 @@ class: flex justify-center items-center
 - JSX 語法長得很像 HTML，讓開發者可以更方便、簡潔、易讀
 - 程式碼中的 JSX 語法必須經過外部工具轉譯成 React.createElement，才能正常地被瀏覽器執行 -->
 
+
+---
+
+# Component
+
+2-7 畫面組裝的藍圖：component 初探
+<br>
+2-8 React 畫面更新的發動機：state 初探
+<br>
+2-9 React 畫面更新的流程機制：reconciliation
+
+<img
+  src="/process_all.svg"
+  alt=""
+/>
+
+
+<!-- 
+- 根據需求，將畫面拆成多個 component
+- component 是藍圖，用來產生 React element，也可以透過 props 來微調產生的 React element
+- 而 component 的資料狀態，則是用 state 來實現
+- 在第三章會再更仔細地介紹 state
+- 第四章會介紹 Component 的生命週期與資料流
+- 第五章則會介紹 useState 以外的其他 hook -->
+
+
+
 ---
 class: flex justify-center items-center
 
