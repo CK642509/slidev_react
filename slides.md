@@ -875,7 +875,6 @@ class: flex justify-center items-center
 
 <div class="grid-container">
   <img
-    v-click
     src="/one-way-dataflow.svg"
     alt=""
   />
@@ -950,7 +949,7 @@ class: flex justify-center items-center
 
 <!-- 
 - 因此，在 2-1 介紹了什麼是 DOM? 什麼是 virtual DOM?
-- [click]在 React 中，React Element 是基於 virtual DOM 概念所實現的虛擬畫面結構元素，同時也是 React 畫面結構中的最小單位
+- [click:2]在 React 中，React Element 是基於 virtual DOM 概念所實現的虛擬畫面結構元素，同時也是 React 畫面結構中的最小單位
 - 而 React Element 是透過 createElement() 這個 function 產生出來的
 - 最後這些 React Element 會再透過 react-dom 進行轉換與繪製，變成實際的 DOM -->
 
