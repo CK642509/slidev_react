@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="896" dy="-339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v4pnJ7CDtAv3jBLD4i89-1" value="原始資料" style="rounded=1;fillColor=#008a00;strokeColor=#005700;strokeWidth=2;fontFamily=Helvetica;html=1;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40.00476190476195" y="860" width="127" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="v4pnJ7CDtAv3jBLD4i89-2" value="模板+渲染邏輯" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontFamily=Helvetica;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="240" y="870" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4pnJ7CDtAv3jBLD4i89-3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="884.69" as="sourcePoint" />
+            <mxPoint x="230" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4pnJ7CDtAv3jBLD4i89-6" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="884.69" as="sourcePoint" />
+            <mxPoint x="440" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4pnJ7CDtAv3jBLD4i89-7" value="畫面結果" style="rounded=1;fillColor=#76608a;strokeColor=#432D57;strokeWidth=2;fontFamily=Helvetica;html=1;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="457.50476190476195" y="860" width="127" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

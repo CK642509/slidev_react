@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="1593" dy="40" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="940" width="280" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" edge="1" parent="1" source="P6ObgYUWyRAv7SW1kq1t-2" target="P6ObgYUWyRAv7SW1kq1t-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-5" value="轉譯" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#D5E8D4;" vertex="1" connectable="0" parent="P6ObgYUWyRAv7SW1kq1t-4">
+          <mxGeometry x="-0.3962" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-2" value="包含 JSX 語法的&lt;div&gt;JavaScript 程式碼檔案&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="147.5" y="1000" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-3" value="包含 React.createElement()&lt;div&gt;語法的&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;JavaScript 程式碼檔案&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="128.75" y="1110" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-6" value="開發環境 build time&lt;div&gt;(JavaScript 程式碼還沒真正被執行)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="115" y="950" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="890" width="470" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="951" width="190" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" edge="1" parent="1" source="P6ObgYUWyRAv7SW1kq1t-9" target="P6ObgYUWyRAv7SW1kq1t-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-9" value="實際執行&lt;div&gt;React.createElement()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" vertex="1" parent="1">
+          <mxGeometry x="442.5" y="990" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-10" value="產出的 React Element" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" vertex="1" parent="1">
+          <mxGeometry x="442.5" y="1100" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-12" value="Virtual DOM" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="455" y="960" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="951" width="190" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-14" value="DOM" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="675" y="960" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-15" value="畫面上的實際&lt;div&gt;DOM Element&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="662.5" y="1030" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=3;" edge="1" parent="1" source="P6ObgYUWyRAv7SW1kq1t-10" target="P6ObgYUWyRAv7SW1kq1t-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="1200" />
+              <mxPoint x="735" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-17" value="透過 react-dom 進行轉換與繪製" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#DAE8FC;" vertex="1" connectable="0" parent="P6ObgYUWyRAv7SW1kq1t-16">
+          <mxGeometry x="-0.2019" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-18" value="瀏覽器環境 run time&lt;div&gt;(JavaScript 程式碼真正被讀取並執行的流程)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="900" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P6ObgYUWyRAv7SW1kq1t-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;" edge="1" parent="1" source="P6ObgYUWyRAv7SW1kq1t-3" target="P6ObgYUWyRAv7SW1kq1t-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
