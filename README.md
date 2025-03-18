@@ -21,3 +21,4 @@ npm run dev
 - 簡報在 `slides.md`
 - 官方範例在 `example.md` (備用)
 - 所有簡報的統一設定 (e.g. 頁碼) 在 `global-top.vue`
+- 簡報中的圖片在 `public` 資料夾
